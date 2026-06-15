@@ -1,0 +1,192 @@
+/* ─────────────────────────────────────────
+   whoisthisfor.css  —  Theme 3: Dark Navy + Light Blue
+───────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:wght@200;300;400;600;700&display=swap');
+
+.who-section {
+  background: linear-gradient(160deg, #060d1f 0%, #0a1635 50%, #071228 100%);
+  padding: 100px 24px;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.who-header {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 64px;
+}
+
+.who-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin: 0 0 14px;
+  background: linear-gradient(90deg, #60c8ff 0%, #4488ff 55%, #a060ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.who-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #e8f4ff;
+  margin: 0 0 12px;
+  letter-spacing: -0.3px;
+}
+
+.who-desc {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(180, 210, 240, 0.6);
+  line-height: 1.8;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+/* ── Heading fade-up animation ── */
+.who-animate {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.who--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Grid ── */
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Card ── */
+.who-card {
+  position: relative;
+  background: rgba(10, 22, 53, 0.6);
+  border: 1px solid rgba(100, 180, 255, 0.12);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  cursor: default;
+  backdrop-filter: blur(12px);
+
+  /* Entrance animation */
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Card visible after scroll */
+.who-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover */
+.who-card:hover {
+  border-color: rgba(100, 180, 255, 0.35);
+  box-shadow: 0 0 32px rgba(60, 130, 255, 0.1), 0 16px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+}
+
+/* Glow blob inside card on hover */
+.who-card-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(100, 180, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.who-card:hover .who-card-glow {
+  opacity: 1;
+}
+
+/* ── Icon bubble ── */
+.who-card-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(100, 180, 255, 0.08);
+  border: 1px solid rgba(100, 180, 255, 0.18);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.who-card:hover .who-card-icon {
+  background: rgba(100, 180, 255, 0.15);
+  transform: scale(1.08);
+}
+
+/* ── Card text ── */
+.who-card-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #e8f4ff;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+
+.who-card-desc {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(150, 190, 230, 0.55);
+  line-height: 1.8;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .who-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .who-section {
+    padding: 72px 16px;
+  }
+
+  .who-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .who-title {
+    font-size: 28px;
+  }
+
+  .who-subtitle {
+    font-size: 18px;
+  }
+}
