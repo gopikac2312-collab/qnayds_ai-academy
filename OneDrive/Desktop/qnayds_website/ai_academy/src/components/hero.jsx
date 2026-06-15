@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/hero.css";
+ import bgImage from '../assets/image.webp'
 
 function StarCanvas() {
   const canvasRef = useRef(null);
@@ -66,7 +67,7 @@ function Hero() {
       <div className="hero-content">
         {/* Badge */}
         <div className="hero-badge">
-          🤖 AI &amp; Machine Learning for Everyone
+           <h1>Best AI Academy in Kerala</h1>
         </div>
 
         {/* Headline */}
@@ -78,6 +79,10 @@ function Hero() {
           {/* <span className="hero-heading-gradient">Those Who Learn It</span> */}
           to <span className="hero-heading-gradient">Those Who Learn&nbsp;It</span>
         </h1>
+   
+
+// then in the JSX:
+<section className="hero-section" style={{ backgroundImage: `linear-gradient(160deg, rgba(6,13,31,0.75) 0%, rgba(10,22,53,0.65) 50%, rgba(7,18,40,0.82) 100%), url(${bgImage})` }}></section>
 
         {/* Subtext */}
         <p className="hero-subtext">
@@ -86,6 +91,10 @@ function Hero() {
           Hands-on courses built for complete beginners. No PhD required —
           just curiosity and a computer.
         </p>
+       
+
+<p>AI certification courses for students, freshers & working professionals 
+across Kochi, Kozhikode, Thrissur & Thiruvananthapuram.</p>
 
         {/* CTA Buttons */}
         <div className="hero-cta-group">
