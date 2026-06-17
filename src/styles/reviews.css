@@ -1,0 +1,233 @@
+/* ─────────────────────────────────────────
+   Reviews.css — Light Blue & White Theme
+───────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:wght@200;300;400;600;700&display=swap');
+
+/* ── Section ── */
+.rv-section {
+  background: linear-gradient(160deg, #daeefb 0%, #eef6fd 50%, #f0f8ff 100%);
+  padding: 100px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ── Header ── */
+.rv-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.rv-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin: 0 0 10px;
+  background: linear-gradient(90deg, #1a9fd4 0%, #1a6fa8 55%, #3a50c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.rv-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #5a8db5;
+  letter-spacing: 0.04em;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── Rating Summary ── */
+.rv-rating-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 3rem;
+}
+
+.rv-big-rating {
+  font-family: 'DM Serif Display', serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1;
+  background: linear-gradient(90deg, #1a9fd4, #1a6fa8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.rv-rating-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Google badge */
+.rv-google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5a8db5;
+  letter-spacing: 0.04em;
+}
+
+.rv-g-icon {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #38b6f0, #1a6fa8);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.rv-stars {
+  color: #f59e0b;
+  font-size: 18px;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.rv-total-count {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #8ab5d4;
+  letter-spacing: 0.05em;
+}
+
+/* ── Grid ── */
+.rv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Card ── */
+.rv-card {
+  background: #ffffff;
+  border: 1px solid rgba(56, 182, 240, 0.2);
+  border-radius: 16px;
+  padding: 1.6rem 1.5rem;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rv-card:hover {
+  background: #f5fbff;
+  border-color: rgba(56, 182, 240, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(56, 182, 240, 0.15);
+}
+
+/* ── Reviewer row ── */
+.rv-reviewer-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.rv-reviewer-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1a5f90;
+  margin: 0 0 3px;
+  letter-spacing: -0.2px;
+}
+
+.rv-reviewer-meta {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #8ab5d4;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.rv-card .rv-stars {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.rv-review-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #5a8db5;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* ── Avatar ── */
+.rv-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+.rv-avatar--purple { background: rgba(100, 60, 255, 0.08);  color: #6040cc; border: 1px solid rgba(100, 60, 255, 0.2); }
+.rv-avatar--teal   { background: rgba(0, 180, 180, 0.08);   color: #0e9090; border: 1px solid rgba(0, 180, 180, 0.2); }
+.rv-avatar--coral  { background: rgba(56, 182, 240, 0.1);   color: #1a6fa8; border: 1px solid rgba(56, 182, 240, 0.25); }
+.rv-avatar--amber  { background: rgba(245, 158, 11, 0.1);   color: #b45309; border: 1px solid rgba(245, 158, 11, 0.2); }
+.rv-avatar--green  { background: rgba(34, 197, 94, 0.08);   color: #15803d; border: 1px solid rgba(34, 197, 94, 0.2); }
+.rv-avatar--blue   { background: rgba(26, 111, 168, 0.1);   color: #1a6fa8; border: 1px solid rgba(26, 111, 168, 0.2); }
+
+/* ── CTA ── */
+.rv-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.rv-cta-link {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #1a6fa8;
+  border: 1px solid rgba(56, 182, 240, 0.35);
+  border-radius: 999px;
+  padding: 12px 36px;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rv-cta-link:hover {
+  background: rgba(56, 182, 240, 0.1);
+  border-color: rgba(56, 182, 240, 0.55);
+  box-shadow: 0 4px 20px rgba(56, 182, 240, 0.18);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .rv-section    { padding: 72px 16px; }
+  .rv-grid       { grid-template-columns: 1fr; }
+  .rv-big-rating { font-size: 40px; }
+  .rv-title      { font-size: 26px; }
+}

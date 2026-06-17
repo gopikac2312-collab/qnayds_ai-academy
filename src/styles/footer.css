@@ -1,0 +1,314 @@
+/* ─────────────────────────────────────────
+   footer.css — Light Blue & White Theme
+───────────────────────────────────────── */
+
+.footer {
+  background: #ffffff;
+  border-top: 0.5px solid rgba(56, 182, 240, 0.2);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ── 4-column grid ── */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 32px 56px;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.4fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* ── Brand col ── */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-dot {
+  width: 9px;
+  height: 9px;
+  background: #38b6f0;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(56, 182, 240, 0.55);
+  flex-shrink: 0;
+}
+
+.footer-logo-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a6fa8;
+  letter-spacing: -0.3px;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: #5a8db5;
+  line-height: 1.75;
+  margin: 0 0 24px;
+}
+
+/* ── Socials ── */
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social {
+  width: 36px;
+  height: 36px;
+  background: #f0f8ff;
+  border: 1px solid rgba(56, 182, 240, 0.25);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5a8db5;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.footer-social:hover {
+  background: rgba(56, 182, 240, 0.15);
+  border-color: rgba(56, 182, 240, 0.45);
+  color: #1a6fa8;
+  transform: translateY(-2px);
+}
+
+/* ── Col title ── */
+.footer-col-title {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #1a6fa8;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid rgba(56, 182, 240, 0.2);
+}
+
+/* ── Links list ── */
+.footer-links {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links li a {
+  text-align: left;
+  font-size: 14px;
+  color: #5a8db5;
+  text-decoration: none;
+
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li a:hover {
+  color: #1a6fa8;
+
+}
+
+/* ── Contact list ── */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-contact-icon {
+  width: 32px;
+  height: 32px;
+  background: #daeefb;
+  border: 1px solid rgba(56, 182, 240, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.footer-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-contact-text span,
+.footer-contact-text a {
+  font-size: 13px;
+  color: #5a8db5;
+  text-decoration: none;
+  line-height: 1.55;
+  transition: color 0.15s;
+}
+
+.footer-contact-text a:hover {
+  color: #1a6fa8;
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  border-top: 0.5px solid rgba(56, 182, 240, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #8ab5d4;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #5a8db5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+
+.footer-bottom a:hover { color: #1a6fa8; }
+
+.footer-bottom p + p::before {
+  content: "·";
+  margin-right: 6px;
+  color: rgba(56, 182, 240, 0.3);
+}
+
+/* ── Responsive — Tablet ── */
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  /* Brand spans full width on tablet */
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── Responsive — Mobile ── */
+@media (max-width: 560px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 48px 20px 36px;
+    gap: 32px;
+  }
+  /* Brand full width */
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+  /* Get Connected full width at bottom */
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 4px;
+  
+    padding: 16px 20px;
+  }
+  .footer-bottom p + p::before { display: none; }
+}
+
+.footer-col {
+  text-align: left;
+}
+
+/* ── Logo image ── */
+.footer-logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── KAi text logo ── */
+.footer-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1px;
+  margin-bottom: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo-k {
+  font-size: 42px;
+  font-weight: 900;
+  color: #1a6fa8;
+  letter-spacing: -4px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.footer-logo-ai {
+  font-size: 38px;
+  font-weight: 800;
+  color: #38b6f0;
+  letter-spacing: -2px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.footer-logo-k,
+.footer-logo-ai {
+  display: inline;
+}
+
+.footer-logo-sub {
+  font-size: 9px;
+  font-weight: 600;
+  color: #7aafd4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── KAi logo layout fix ── */
+.footer-logo {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 4px !important;
+  margin-bottom: 16px;
+}
+
+.footer-logo-wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
