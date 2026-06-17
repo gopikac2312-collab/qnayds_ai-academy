@@ -1,10 +1,10 @@
 /* ─────────────────────────────────────────
-   footer.css
+   footer.css — Light Blue & White Theme
 ───────────────────────────────────────── */
 
 .footer {
-  background: #031037;
-  border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+  background: #ffffff;
+  border-top: 0.5px solid rgba(56, 182, 240, 0.2);
   font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -36,22 +36,22 @@
 .footer-logo-dot {
   width: 9px;
   height: 9px;
-  background: #00d4ff;
+  background: #38b6f0;
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.7);
+  box-shadow: 0 0 8px rgba(56, 182, 240, 0.55);
   flex-shrink: 0;
 }
 
 .footer-logo-name {
   font-size: 17px;
   font-weight: 700;
-  color: #ffffff;
+  color: #1a6fa8;
   letter-spacing: -0.3px;
 }
 
 .footer-tagline {
   font-size: 13px;
-  color: rgba(231, 228, 235, 0.4);
+  color: #5a8db5;
   line-height: 1.75;
   margin: 0 0 24px;
 }
@@ -65,21 +65,21 @@
 .footer-social {
   width: 36px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #f0f8ff;
+  border: 1px solid rgba(56, 182, 240, 0.25);
   border-radius: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #5a8db5;
   text-decoration: none;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .footer-social:hover {
-  background: rgba(0, 212, 255, 0.12);
-  border-color: rgba(0, 212, 255, 0.35);
-  color: #00d4ff;
+  background: rgba(56, 182, 240, 0.15);
+  border-color: rgba(56, 182, 240, 0.45);
+  color: #1a6fa8;
   transform: translateY(-2px);
 }
 
@@ -89,11 +89,11 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: rgba(20, 87, 201, 0.9);
+  color: #1a6fa8;
   text-transform: uppercase;
   margin: 0 0 24px;
   padding-bottom: 12px;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 0.5px solid rgba(56, 182, 240, 0.2);
 }
 
 /* ── Links list ── */
@@ -111,7 +111,7 @@
 .footer-links li a {
   text-align: left;
   font-size: 14px;
-  color: rgba(252, 252, 252, 0.5);
+  color: #5a8db5;
   text-decoration: none;
 
   display: block;
@@ -120,7 +120,7 @@
 }
 
 .footer-links li a:hover {
-  color: #73b3d0;
+  color: #1a6fa8;
 
 }
 
@@ -143,8 +143,8 @@
 .footer-contact-icon {
   width: 32px;
   height: 32px;
-  background: rgba(0, 212, 255, 0.08);
-  border: 1px solid rgba(0, 212, 255, 0.15);
+  background: #daeefb;
+  border: 1px solid rgba(56, 182, 240, 0.3);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -163,14 +163,14 @@
 .footer-contact-text span,
 .footer-contact-text a {
   font-size: 13px;
-  color: rgba(160, 180, 230, 0.5);
+  color: #5a8db5;
   text-decoration: none;
   line-height: 1.55;
   transition: color 0.15s;
 }
 
 .footer-contact-text a:hover {
-  color: #00d4ff;
+  color: #1a6fa8;
 }
 
 /* ── Bottom bar ── */
@@ -178,7 +178,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 32px;
-  border-top: 0.5px solid rgba(114, 182, 241, 0.06);
+  border-top: 0.5px solid rgba(56, 182, 240, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,23 +188,23 @@
 
 .footer-bottom p {
   font-size: 13px;
-  color: rgba(226, 220, 220, 0.3);
+  color: #8ab5d4;
   margin: 0;
 }
 
 .footer-bottom a {
-  color: rgba(90, 133, 204, 0.5);
+  color: #5a8db5;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.15s;
 }
 
-.footer-bottom a:hover { color: #00d4ff; }
+.footer-bottom a:hover { color: #1a6fa8; }
 
 .footer-bottom p + p::before {
   content: "·";
   margin-right: 6px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(56, 182, 240, 0.3);
 }
 
 /* ── Responsive — Tablet ── */
@@ -269,7 +269,7 @@
 .footer-logo-k {
   font-size: 42px;
   font-weight: 900;
-  color: #132cd1;
+  color: #1a6fa8;
   letter-spacing: -4px;
   font-style: italic;
   line-height: 1;
@@ -278,7 +278,7 @@
 .footer-logo-ai {
   font-size: 38px;
   font-weight: 800;
-  color: #468cd7;
+  color: #38b6f0;
   letter-spacing: -2px;
   font-style: italic;
   line-height: 1;
@@ -292,7 +292,7 @@
 .footer-logo-sub {
   font-size: 9px;
   font-weight: 600;
-  color: rgba(25, 56, 237, 0.5);
+  color: #7aafd4;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-top: 4px;

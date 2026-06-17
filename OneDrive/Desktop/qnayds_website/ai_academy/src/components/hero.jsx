@@ -99,7 +99,7 @@ function Hero() {
         {/* CTA Buttons */}
         <div className="hero-cta-group">
           <a href="#enroll" className="hero-btn-primary" onClick={scrollTo("enroll")}>
-            Start learning free
+            Start learning 
           </a>
           <a href="#courses" className="hero-btn-secondary" onClick={scrollTo("courses")}>
             Browse courses

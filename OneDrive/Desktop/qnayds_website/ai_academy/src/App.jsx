@@ -2,7 +2,7 @@ import Hero from './components/hero'
 import Header from './components/header'
 import './App.css'
 import WhoIsThisFor from './components/whoisthisfor'
-import WhatYouCanDo from './components/whatyoucando'
+
 import Courses from './components/courses'
 import Enroll from './components/enroll'
 import Footer from './components/footer'
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Hero />
       <WhoIsThisFor/>
-      <WhatYouCanDo/>
+     
       <Courses/>
       <Reviews/>
       <Enroll/>
