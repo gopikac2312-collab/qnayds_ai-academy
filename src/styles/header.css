@@ -2,6 +2,9 @@
    header.css — light blue & white theme
 ───────────────────────────────────────── */
 
+/* Import Outfit font for a premium, clean geometric logo font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap');
+
 .header {
   position: fixed;
   top: 0;
@@ -12,7 +15,7 @@
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 0.5px solid rgba(56, 182, 240, 0.2);
+  border-bottom: 0.5px solid rgba(26, 123, 169, 0.2);
 }
 
 .header-inner {
@@ -30,13 +33,60 @@
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  color: #1a6fa8;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.header-logo-img {
+  width: 44px; /* Slightly adjusted to look balanced in the 64px header */
+  height: 44px;
+  object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.header-logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   white-space: nowrap;
-  letter-spacing: -0.2px;
+  
+  /* Gradient colors matching the site's theme */
+  background: linear-gradient(90deg, #0d476e 0%, #2d4abd 40%, #0c219c 70%, #0d476e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  transition: transform 0.3s ease;
+}
+
+/* Shimmer Animation */
+@keyframes shimmerLogo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Interactive Hover States */
+.header-logo:hover {
+  transform: translateY(-0.5px);
+}
+
+.header-logo:hover .header-logo-img {
+  transform: scale(1.05) rotate(4deg);
+}
+
+.header-logo:hover .header-logo-text {
+  animation: shimmerLogo 2.2s linear infinite;
 }
 
 .header-logo-dot {
@@ -60,7 +110,7 @@
 
 .header-nav-link {
   font-size: 14px;
-  color: #5a8db5;
+  color: #0d73c1;
   text-decoration: none;
   font-weight: 400;
   transition: color 0.15s;
@@ -165,7 +215,7 @@
   .header-nav-link {
     padding: 12px 0;
     font-size: 15px;
-    border-bottom: 0.5px solid rgba(56, 182, 240, 0.12);
+    border-bottom: 0.5px solid rgba(78, 159, 196, 0.12);
   }
 
   /* Remove orphaned border on last nav link */

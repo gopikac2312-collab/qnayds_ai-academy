@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:wght@200;300;400;600;700&display=swap');
 
 .enroll-section {
-  background: linear-gradient(160deg, #daeefb 0%, #eef6fd 50%, #f0f8ff 100%);
+  background: linear-gradient(160deg, #80aecd 0%, #eef6fd 50%, #f0f8ff 100%);
   padding: 100px 24px;
   font-family: 'Raleway', sans-serif;
   display: flex;
@@ -67,10 +67,10 @@
 }
 
 .enroll-desc {
-  font-family: 'Raleway', sans-serif;
+  font-family: '', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #5a8db5;
+  color: #257cbf;
   line-height: 1.8;
   max-width: 520px;
   margin: 0 auto;

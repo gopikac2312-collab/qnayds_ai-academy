@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/hero.css";
-import bgImage from '../assets/image.webp';
+import bgImage from '../assets/image.png';
 
 function StarCanvas() {
   const canvasRef = useRef(null);
@@ -64,7 +64,8 @@ function Hero() {
     <section
       className="hero-section"
       style={{
-        backgroundImage: `linear-gradient(160deg, rgba(6,13,31,0.75) 0%, rgba(10,22,53,0.65) 50%, rgba(7,18,40,0.82) 100%), url(${bgImage})`,
+        /* No color overlay, only the background image is loaded */
+        backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -88,9 +89,6 @@ function Hero() {
         {/* Subtext */}
         <p className="hero-subtext">
           Unlock Your Potential with the Power of AI
-          <br />
-          Hands-on courses built for complete beginners. No PhD required —
-          just curiosity and a computer.
         </p>
 
         <p>AI certification courses for students, freshers & working professionals

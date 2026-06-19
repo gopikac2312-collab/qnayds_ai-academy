@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:wght@200;300;400;600;700&display=swap');
 
 .courses-section {
-  background: linear-gradient(160deg, #daeefb 0%, #eef6fd 50%, #f0f8ff 100%);
+  background: linear-gradient(160deg, #8dc4e8 0%, #eef6fd 50%, #f0f8ff 100%);
   padding: 100px 24px;
   font-family: 'Raleway', sans-serif;
   overflow: hidden;
@@ -40,10 +40,10 @@
 }
 
 .courses-desc {
-  font-family: 'Raleway', sans-serif;
+  font-family: '', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #5a8db5;
+  color: #2e6b9a;
   line-height: 1.8;
   margin: 0;
   letter-spacing: 0.04em;
@@ -188,10 +188,10 @@
 }
 
 .course-card-desc {
-  font-family: 'Raleway', sans-serif;
+  font-family: '', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #5a8db5;
+  color: #156099;
   line-height: 1.8;
   margin: 0;
   flex: 1;

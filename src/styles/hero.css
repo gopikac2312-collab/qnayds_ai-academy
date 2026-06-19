@@ -7,18 +7,40 @@
 /* ── Global fonts ── */
 body {
   font-family: 'Raleway', sans-serif;
-  background: #f0f8ff;
+  background: #9cc6eb;
 }
 
 h1, h2, h3, h4 {
   font-family: 'DM Serif Display', serif;
 }
 
-/* ── Hero Section ──
-   NOTE: If your background photo is applied via an inline style or a
-   separate class on this element, keep that — this rule only adds
-   sizing/position so the photo displays correctly, and the ::before
-   overlay below sits on top of it for readability. */
+/* ── Animation Keyframes ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(4px); /* Premium soft-focus reveal */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ── Hero Section ── */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -28,42 +50,28 @@ h1, h2, h3, h4 {
   text-align: center;
   overflow: hidden;
   padding: 80px 24px 60px;
-  background-color: #88bedd; /* fallback if photo fails to load */
+  background-color: #e1e3e4; /* fallback if photo fails to load */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* ── Light overlay so text stays readable over the photo ── */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(181, 208, 225, 0.88) 0%,
-    rgba(238, 246, 253, 0.82) 50%,
-    rgba(240, 248, 255, 0.85) 100%
-  );
-  pointer-events: none;
-}
-
-/* ── Star canvas (kept for compatibility, invisible on light bg) ── */
+/* ── Star canvas (transparent and overlays correctly) ── */
 .hero-starcanvas {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0;
+  z-index: 1;
+  pointer-events: none; /* Allows user to click buttons behind it */
+  background: transparent !important; /* Force transparent background */
 }
 
 /* ── Content wrapper ── */
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Sits on top of both background image and canvas */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +79,7 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-/* ── Badge ── */
+/* ── Badge (reveals 1st) ── */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -83,6 +91,11 @@ h1, h2, h3, h4 {
   border-radius: 999px;
   margin-bottom: 36px;
   backdrop-filter: blur(8px);
+  
+  /* Entrance Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
 }
 
 .hero-badge h1 {
@@ -95,54 +108,80 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-/* ── Heading ── */
+/* ── Heading (reveals 2nd) ── */
 .hero-heading {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(36px, 6vw, 72px);
-  font-weight: 400;
+  font-weight: 800;
   color: #0d3f6b;
   line-height: 1.08;
   letter-spacing: -0.5px;
   margin: 0 0 24px;
   word-break: keep-all;
   overflow-wrap: normal;
+
+  /* Entrance Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
 }
 
+/* ── Flowing Heading Gradient ── */
 .hero-heading-gradient {
-  background: linear-gradient(90deg, #1a9fd4 0%, #1a6fa8 55%, #3a50c8 100%);
+  /* Using your custom colors in a loop for seamless flow */
+  background: linear-gradient(90deg, #0d476e 0%, #2d4abd 35%, #0c219c 70%, #0d476e 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  
+  /* Continuous flow animation */
+  animation: gradientFlow 5s linear infinite;
 }
 
-/* ── Subtext ── */
+/* ── Subtext (reveals 3rd) ── */
 .hero-subtext {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
+  font-family: sans-serif;
+  font-weight: 400;
   font-size: 17px;
-  color: #2e6490;
+  color: #3d82e1;
   line-height: 1.85;
   max-width: 520px;
   margin-bottom: 16px;
   letter-spacing: 0.05em;
+
+  /* Entrance Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s;
 }
 
-/* ── SEO city paragraph ── */
+/* ── SEO city paragraph (reveals 3rd) ── */
 .hero-content > p:not(.hero-subtext) {
-  font-family: 'Raleway', sans-serif;
-  font-size: 15px;
-  color: #3a7cb5;
+  font-family: sans-serif;
+  font-size: 17px;
+  color: #1184e9;
   letter-spacing: 0.04em;
   margin: 0 0 32px;
+
+  /* Entrance Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s;
 }
 
-/* ── CTA group ── */
+/* ── CTA group (reveals 4th) ── */
 .hero-cta-group {
   display: flex;
   gap: 14px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  /* Entrance Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.7s;
 }
 
 /* Primary button */
@@ -152,7 +191,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
-  background: linear-gradient(135deg, #38b6f0, #1a6fa8);
+  background: linear-gradient(135deg, #2caae4, #0b5d93);
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
@@ -167,7 +206,7 @@ h1, h2, h3, h4 {
 
 .hero-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(56, 182, 240, 0.35);
+  box-shadow: 0 8px 28px rgba(15, 164, 233, 0.35);
 }
 
 .hero-btn-primary:active {
@@ -181,8 +220,8 @@ h1, h2, h3, h4 {
   justify-content: center;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
-  background: rgba(56, 182, 240, 0.08);
-  color: #1a6fa8;
+  background: rgba(9, 156, 224, 0.08);
+  color: #e1eaef;
   font-size: 15px;
   font-weight: 600;
   padding: 15px 32px;
@@ -198,7 +237,7 @@ h1, h2, h3, h4 {
   border-color: rgba(56, 182, 240, 0.55);
 }
 
-/* ── Stats row ── */
+/* ── Stats row (reveals last) ── */
 .hero-stats {
   display: flex;
   align-items: center;
@@ -207,6 +246,11 @@ h1, h2, h3, h4 {
   margin-top: 56px;
   flex-wrap: wrap;
   row-gap: 24px;
+
+  /* Entrance Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.9s;
 }
 
 .hero-stat {
@@ -222,7 +266,7 @@ h1, h2, h3, h4 {
   font-size: 30px;
   font-weight: 400;
   letter-spacing: -0.5px;
-  background: linear-gradient(90deg, #1a9fd4, #1a6fa8);
+  background: linear-gradient(90deg, #41bef0, #076bad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -230,17 +274,17 @@ h1, h2, h3, h4 {
 
 .hero-stat-label {
   font-family: 'Raleway', sans-serif;
-  font-size: 12px;
-  color: #7aafd4;
+  font-size: 13px;
+  color: #16476e;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .hero-stat-divider {
-  width: 1px;
+  width: 2px;
   height: 40px;
-  background: rgba(56, 182, 240, 0.2);
+  background: rgba(61, 131, 164, 0.2);
   flex-shrink: 0;
 }
 
